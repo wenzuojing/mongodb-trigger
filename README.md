@@ -1,7 +1,7 @@
 # mongodb-trigger
 ===
 
-类似关系数据库的触发，mongodb-trigger同样可以监听操作事件，粒度可以达到字段级别。
+类似关系数据库的触发器，mongodb-trigger同样可以监听操作事件，粒度可以达到字段级别。
 
 ### 使用场景
 
@@ -55,6 +55,6 @@ sh start-server.sh
 
 * 引入Groovy，handler可以使用groovy编写
 * handler插件化
-
+* 性能优化
 
 
