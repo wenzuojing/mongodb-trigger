@@ -1,5 +1,4 @@
 # mongodb-trigger
-===
 
 类似关系数据库的触发器，mongodb-trigger同样可以监听操作事件，粒度可以达到字段级别。
 
