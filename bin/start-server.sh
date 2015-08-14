@@ -37,6 +37,6 @@ echo "JAVA_HOME  :$JAVA_HOME"
 echo "SERVER_HOME:$SERVER_HOME"
 echo "CLASSPATH  :$CLASSPATH"
 
-exec  $java $JAVA_OPTS com.mongodb.event.MongodbEventBoostrap  $* >$0.log 2>&1  &ls
+exec  $java -classpath  $CLASSPATH  $JAVA_OPTS org.wzj.mongodb.trigger.Bootstrap
 
 
