@@ -1,0 +1,21 @@
+{
+  id: "mongodb-event-1",
+  mongodb: {
+    servers: [
+      {
+        host: "192.168.59.103",
+        port: 22117
+      }
+    ],
+    options: {
+      connectTimeout: 11000
+    }
+  },
+  events: [
+    {
+      db: "test_db",
+      collection: "user",
+      handler: "org.wzj.mongodb.trigger.UserHandler"
+    }
+  ]
+}
