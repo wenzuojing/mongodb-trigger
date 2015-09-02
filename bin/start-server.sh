@@ -31,7 +31,29 @@ done
 
 java=$JAVA_HOME/bin/java
 
-JAVA_OPTS="-Xms256m -Xmx512m -XX:PermSize=256m -XX:MaxPermSize=512m"
+JAVA_OPTS="
+-Xmx1G
+-Xms1G
+-XX:PermSize=128M 
+-XX:MaxPermSize=256M  
+-XX:+UseConcMarkSweepGC 
+-XX:+UseParNewGC
+-XX:+CMSConcurrentMTEnabled
+-XX:+CMSParallelRemarkEnabled 
+-XX:+UseCMSCompactAtFullCollection 
+-XX:CMSFullGCsBeforeCompaction=0 
+-XX:+CMSClassUnloadingEnabled 
+-XX:LargePageSizeInBytes=128M 
+-XX:+UseFastAccessorMethods 
+-XX:+UseCMSInitiatingOccupancyOnly 
+-XX:CMSInitiatingOccupancyFraction=80 
+-XX:SoftRefLRUPolicyMSPerMB=0 
+-XX:+PrintClassHistogram
+-XX:+PrintGCDetails 
+-XX:+PrintGCTimeStamps 
+-XX:+PrintHeapAtGC 
+-Xloggc:log/gc.log
+"
 
 echo "JAVA_HOME  :$JAVA_HOME"
 echo "SERVER_HOME:$SERVER_HOME"
